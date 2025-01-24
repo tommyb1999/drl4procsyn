@@ -23,9 +23,9 @@ class EnvConfig:
         # the parameters specify the discretization levels of the lles and vles
         self.systems_allowed = {
             "acetone_chloroform": True,
-            "ethanol_water": True,
-            "n-butanol_water": True,
-            "water_pyridine": True
+            "ethanol_water": False,
+            "n-butanol_water": False,
+            "water_pyridine": False
         }
         self.dicretization_parameter_lle = 5
         self.curvature_parameter_vle = 0.001
@@ -106,7 +106,7 @@ class EnvConfig:
                                           self.units_map_indices_type]
 
         # allow special actions like solvent / rec / split
-        self.allow_split = False
+        self.allow_split = True
         self.allow_solvent = True
         self.allow_recycle = True
 
